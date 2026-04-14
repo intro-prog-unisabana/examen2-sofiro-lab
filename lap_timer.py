@@ -75,6 +75,12 @@ def fastest_multi_lap(timer, k):
 
     current_sum = sum(times[:k])
     min_sum = current_sum
+    for i in range(k, len(times)):
+        current_sum += times[i] - times[i - k]
+        if current_sum < min_sum:
+            min_sum = current_sum
+
+    return min_sum
 
 
 def longest_decreasing_streak(timer):
