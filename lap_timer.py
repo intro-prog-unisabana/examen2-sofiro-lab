@@ -12,7 +12,11 @@ def init(max_laps):
     Crea y retorna un diccionario para almacenar hasta max_laps vueltas.
     """
     # TODO: Implementar
-    pass
+    return {
+        'max': max_laps,
+        'times': [],
+        'total': 0.0
+    }
 
 
 def add_lap(timer, time):
