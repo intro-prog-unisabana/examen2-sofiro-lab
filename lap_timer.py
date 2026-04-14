@@ -25,7 +25,10 @@ def add_lap(timer, time):
     Retorna el diccionario modificado.
     """
     # TODO: Implementar
-    pass
+    if len(timer['times']) < timer['max']:
+        timer['times'].append(time)
+        timer['total'] += time
+    return timer
 
 
 def count(timer):
