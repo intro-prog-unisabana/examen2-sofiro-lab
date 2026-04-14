@@ -53,7 +53,7 @@ def format_laps(timer):
     Formato: [t1, t2, t3, ..., tn]
     """
     # TODO: Implementar
-    pass
+    return str(timer['times'])
 
 
 def fastest_lap(timer):
@@ -61,7 +61,7 @@ def fastest_lap(timer):
     Retorna el tiempo mas rapido de cualquier vuelta.
     """
     # TODO: Implementar
-    pass
+    return min(timer['times']) if timer['times'] else None
 
 
 def fastest_multi_lap(timer, k):
