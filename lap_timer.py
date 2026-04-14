@@ -69,7 +69,11 @@ def fastest_multi_lap(timer, k):
     Retorna el tiempo acumulado mas rapido de cualquier k vueltas consecutivas.
     """
     # TODO: Implementar
-    current_sum = sum(timer[:k])
+    times = timer['times']
+    if k > len(times) or k == 0:
+        return None
+
+    current_sum = sum(times[:k])
     min_sum = current_sum
 
 
